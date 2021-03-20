@@ -4,6 +4,8 @@ plugins {
     id "org.sonarqube" version "3.0"
     id 'java'
     id 'war'
+    id 'jacoco'
+
 }
 
 group = 'com.example'
@@ -25,7 +27,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    reports.junitXml.destination = file('build/test-results/test/Preudhomme.xml')
+   // reports.junitXml.destination = file('build/test-results/test/Preudhomme.xml')
 }
 war {
     enabled=true
@@ -34,5 +36,11 @@ war {
 sonarqube {
     properties {
         property "sonar.sourceEncoding", "UTF-8"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
     }
 }
