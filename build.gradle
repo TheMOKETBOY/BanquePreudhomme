@@ -25,7 +25,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    reports.junitXml.destination = file('build/test-results/folder')
+    reports.junitXml.destination = file('build/test-results/test/Preudhomme.xml')
 }
 war {
     enabled=true
@@ -33,6 +33,6 @@ war {
 
 sonarqube {
     properties {
-        property "sonar.sourceEncoding", "XML"
+        property "sonar.sourceEncoding", "UTF-8"
     }
 }
