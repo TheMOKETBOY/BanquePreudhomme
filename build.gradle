@@ -12,6 +12,16 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+reporting.baseDir = "my-reports"
+testResultsDirName = "$buildDir/my-test-results"
+
+task showDirs {
+    doLast {
+        logger.quiet(rootDir.toPath().relativize(project.reportsDir.toPath()).toString())
+        logger.quiet(rootDir.toPath().relativize(project.testResultsDir.toPath()).toString())
+    }
+}
+
 repositories {
     mavenCentral()
 }
