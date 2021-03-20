@@ -27,7 +27,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
-   // reports.junitXml.destination = file('build/test-results/test/Preudhomme.xml')
+    reports.junitXml.destination = file('**/test-results/test/*.xml')
 }
 war {
     enabled=true
