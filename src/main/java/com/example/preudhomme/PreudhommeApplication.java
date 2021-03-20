@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
- class PreudhommeApplication {
+public class PreudhommeApplication {
 
-     static void main(String[] args) {
+    public static void main(String[] args) {
         SpringApplication.run(PreudhommeApplication.class, args);
 
     }
